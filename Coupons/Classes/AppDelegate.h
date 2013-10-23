@@ -28,20 +28,20 @@
 #import <UIKit/UIKit.h>
 
 #ifdef PHONEGAP_FRAMEWORK
-    #import <PhoneGap/PGViewController.h>
+#import <PhoneGap/PGViewController.h>
 #else
-    #import "PGViewController.h"
+#import "PGViewController.h"
 #endif
 
 
 @interface AppDelegate : NSObject < UIApplicationDelegate, UIWebViewDelegate, PGCommandDelegate > {
-
+    
 	NSString* invokeString;
 }
 
-// invoke string is passed to your app on launch, this is only valid if you 
+// invoke string is passed to your app on launch, this is only valid if you
 // edit FooBar.plist to add a protocol
-// a simple tutorial can be found here : 
+// a simple tutorial can be found here :
 // http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
 
 @property (nonatomic, copy)  NSString* invokeString;
@@ -49,4 +49,5 @@
 @property (nonatomic, retain) IBOutlet PGViewController* viewController;
 
 @end
+
 

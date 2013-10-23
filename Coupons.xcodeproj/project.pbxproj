@@ -37,6 +37,15 @@
 		D9CA9B4617CE973900263D65 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9CA9B4517CE973900263D65 /* MainViewController.xib */; };
 		D9CA9B4F17CE988500263D65 /* www in Resources */ = {isa = PBXBuildFile; fileRef = D9CA9B4E17CE988500263D65 /* www */; };
 		D9CA9B5517CEA10C00263D65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9CA9B5417CEA10C00263D65 /* Default-568h@2x.png */; };
+		D9D88F3117D8FADE006EC31C /* ChildBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D9D88F2517D8FADE006EC31C /* ChildBrowser.bundle */; };
+		D9D88F3217D8FADE006EC31C /* ChildBrowserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D88F2717D8FADE006EC31C /* ChildBrowserCommand.m */; };
+		D9D88F3317D8FADE006EC31C /* ChildBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D88F2917D8FADE006EC31C /* ChildBrowserViewController.m */; };
+		D9D88F3417D8FADE006EC31C /* ChildBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D88F2A17D8FADE006EC31C /* ChildBrowserViewController.xib */; };
+		D9D88F3517D8FADE006EC31C /* facebook.html in Resources */ = {isa = PBXBuildFile; fileRef = D9D88F2C17D8FADE006EC31C /* facebook.html */; };
+		D9D88F3617D8FADE006EC31C /* FBConnect.js in Sources */ = {isa = PBXBuildFile; fileRef = D9D88F2D17D8FADE006EC31C /* FBConnect.js */; };
+		D9D88F3717D8FADE006EC31C /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D9D88F2E17D8FADE006EC31C /* index.html */; };
+		D9D88F3817D8FADE006EC31C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D9D88F2F17D8FADE006EC31C /* README.txt */; };
+		D9D88F3917D8FADE006EC31C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D9D88F3017D8FADE006EC31C /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +85,17 @@
 		D9CA9B4817CE973900263D65 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		D9CA9B4E17CE988500263D65 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		D9CA9B5417CEA10C00263D65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D9D88F2517D8FADE006EC31C /* ChildBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChildBrowser.bundle; sourceTree = "<group>"; };
+		D9D88F2617D8FADE006EC31C /* ChildBrowserCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBrowserCommand.h; sourceTree = "<group>"; };
+		D9D88F2717D8FADE006EC31C /* ChildBrowserCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildBrowserCommand.m; sourceTree = "<group>"; };
+		D9D88F2817D8FADE006EC31C /* ChildBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBrowserViewController.h; sourceTree = "<group>"; };
+		D9D88F2917D8FADE006EC31C /* ChildBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildBrowserViewController.m; sourceTree = "<group>"; };
+		D9D88F2A17D8FADE006EC31C /* ChildBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildBrowserViewController.xib; sourceTree = "<group>"; };
+		D9D88F2C17D8FADE006EC31C /* facebook.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = facebook.html; sourceTree = "<group>"; };
+		D9D88F2D17D8FADE006EC31C /* FBConnect.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FBConnect.js; sourceTree = "<group>"; };
+		D9D88F2E17D8FADE006EC31C /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D9D88F2F17D8FADE006EC31C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		D9D88F3017D8FADE006EC31C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,9 +255,37 @@
 		D9CA9B4717CE973900263D65 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				D9D88F2417D8FADE006EC31C /* ChildBrowser */,
 				D9CA9B4817CE973900263D65 /* README */,
 			);
 			name = Plugins;
+			sourceTree = "<group>";
+		};
+		D9D88F2417D8FADE006EC31C /* ChildBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				D9D88F2517D8FADE006EC31C /* ChildBrowser.bundle */,
+				D9D88F2617D8FADE006EC31C /* ChildBrowserCommand.h */,
+				D9D88F2717D8FADE006EC31C /* ChildBrowserCommand.m */,
+				D9D88F2817D8FADE006EC31C /* ChildBrowserViewController.h */,
+				D9D88F2917D8FADE006EC31C /* ChildBrowserViewController.m */,
+				D9D88F2A17D8FADE006EC31C /* ChildBrowserViewController.xib */,
+				D9D88F2B17D8FADE006EC31C /* FBConnectExample */,
+				D9D88F3017D8FADE006EC31C /* README.txt */,
+			);
+			name = ChildBrowser;
+			path = Plugins/ChildBrowser;
+			sourceTree = "<group>";
+		};
+		D9D88F2B17D8FADE006EC31C /* FBConnectExample */ = {
+			isa = PBXGroup;
+			children = (
+				D9D88F2C17D8FADE006EC31C /* facebook.html */,
+				D9D88F2D17D8FADE006EC31C /* FBConnect.js */,
+				D9D88F2E17D8FADE006EC31C /* index.html */,
+				D9D88F2F17D8FADE006EC31C /* README.txt */,
+			);
+			path = FBConnectExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +356,12 @@
 				D9CA9B4617CE973900263D65 /* MainViewController.xib in Resources */,
 				D9CA9B4F17CE988500263D65 /* www in Resources */,
 				D9CA9B5517CEA10C00263D65 /* Default-568h@2x.png in Resources */,
+				D9D88F3117D8FADE006EC31C /* ChildBrowser.bundle in Resources */,
+				D9D88F3417D8FADE006EC31C /* ChildBrowserViewController.xib in Resources */,
+				D9D88F3517D8FADE006EC31C /* facebook.html in Resources */,
+				D9D88F3717D8FADE006EC31C /* index.html in Resources */,
+				D9D88F3817D8FADE006EC31C /* README.txt in Resources */,
+				D9D88F3917D8FADE006EC31C /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +391,9 @@
 				D9CA9B2117CE973900263D65 /* main.m in Sources */,
 				D9CA9B4117CE973900263D65 /* AppDelegate.m in Sources */,
 				D9CA9B4417CE973900263D65 /* MainViewController.m in Sources */,
+				D9D88F3217D8FADE006EC31C /* ChildBrowserCommand.m in Sources */,
+				D9D88F3317D8FADE006EC31C /* ChildBrowserViewController.m in Sources */,
+				D9D88F3617D8FADE006EC31C /* FBConnect.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,13 +438,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = armv7;
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan McArdle (C7RXRHM8S5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan McArdle (C7RXRHM8S5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -403,8 +463,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "AEA62B47-00A6-4FC5-AC43-2660682E9FF7";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AEA62B47-00A6-4FC5-AC43-2660682E9FF7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -414,13 +474,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = armv7;
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan McArdle (5R3L73G3VR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan McArdle (5R3L73G3VR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -428,8 +491,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "FA68E6B4-48C6-440F-A9CB-4926E82C0993";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FA68E6B4-48C6-440F-A9CB-4926E82C0993";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
@@ -440,18 +503,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan McArdle (C7RXRHM8S5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan McArdle (C7RXRHM8S5)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/PhoneGap/Frameworks;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coupons/Coupons-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
-				GCC_VERSION = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "Coupons/Coupons-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -463,8 +530,8 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "AEA62B47-00A6-4FC5-AC43-2660682E9FF7";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AEA62B47-00A6-4FC5-AC43-2660682E9FF7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -474,16 +541,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan McArdle (5R3L73G3VR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan McArdle (5R3L73G3VR)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/PhoneGap/Frameworks;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coupons/Coupons-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
-				GCC_VERSION = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "Coupons/Coupons-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
@@ -497,8 +568,8 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FA68E6B4-48C6-440F-A9CB-4926E82C0993";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FA68E6B4-48C6-440F-A9CB-4926E82C0993";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
