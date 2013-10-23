@@ -35,8 +35,7 @@ ToolbarDemo.views.Categorycard = Ext.extend(Ext.form.FormPanel, {
 	            title: 'Places of interest',
 	            items: [
 	                { xtype: 'spacer' }
-                       ,
-                       upLoadPoints
+                  //,upLoadPoints
 	            ]
 	        });
 	        			

@@ -12,7 +12,7 @@ ToolbarDemo = new Ext.Application({
 		if (!ToolbarDemo.views.mainView) {
 			console.log('app.js_mainview');
 		ToolbarDemo.views.mainView = new ToolbarDemo.views.MainView();
-        }
+       }
 		
 		if (!ToolbarDemo.views.stuffView) {
 			console.log('app.js_stuffview');
