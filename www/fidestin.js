@@ -28,10 +28,11 @@ Fidestin.Utils.Version=1.2;   	//TEST This matches the webservice version which 
 //console.log('Fidestin.Utils.Version  ' + Fidestin.Utils.Version);
 //console.log('Fidestin.WebServices.Location ' : + Fidestin.WebServices.Location);
 
-var DEBUG_debugalert=false;
+var DEBUG_debugalert=true;
 
 function debugalert(themessage){
     if (DEBUG_debugalert==true){
+    console.log(themessage);
         alert(themessage);
         //console.log(themessage);
     }
@@ -146,11 +147,14 @@ Fidestin.Utils.javFunc=function(vid){
 		}
 }
 
+
+
+
 Fidestin.Utils.UserLocation=function(){
     try{
     console.log('Getting user location');
-    navigator.geolocation.getCurrentPosition(   
-                                             Fidestin.Utils.UserLocationSuccess,                                           
+    navigator.geolocation.getCurrentPosition(
+                                             Fidestin.Utils.UserLocationSuccess,
                                              Fidestin.Utils.UserLocationFailure
                                              );
     }
