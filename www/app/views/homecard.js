@@ -51,10 +51,8 @@ ToolbarDemo.views.Homecard = Ext.extend(Ext.TabPanel, {
 						    text:   'Scan',
 						    height : 100,
 						    width:150,
-						    ui:     'confirm',
-						    handler	:function(){
-						    	ToolbarDemo.views.OpenBarCode();
-						    }
+						    ui:     'confirm'
+						   
 						},
 						{
 							xtype:'spacer',

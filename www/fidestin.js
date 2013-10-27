@@ -125,28 +125,6 @@ Fidestin.Utils.getMonthAsInteger=function(monthstring)
 	
 }
 
-//Used to redeem the voucher for the retailer...
-Fidestin.Utils.javFunc=function(vid){
-		if (confirm("Redeem this Voucher : " + vid+"?"))
-		{
-		var params="{voucherID:'"+vid+"'}";
-	            $.ajax({
-	                type:"POST",
-	                data:params,
-	                dataType:"json",    
-	                contentType: "application/json; charset=utf-8",
-	                url:Fidestin.WebServices.Location+"/Service1.asmx/RedeemVoucher",
-	                success:function(result) {
-	                   // alert('Voucher ' + vid + ' redeemed.Reloading data....');
-	                    window.location.reload();
-	                },
-	                error:function(){
-	                    alert('Error in Fidestin.Utils.javFunc');
-	                }
-	            });      
-		}
-}
-
 
 
 
@@ -181,22 +159,6 @@ Fidestin.Utils.UserLocationSuccess=function(position){
 
 }
 
-Fidestin.Utils.CheckFidstinConnection=function(){
-    
-    try{
-    
-        
-    }
-    catch(b)
-    {
-        debugalert('Error in Fidestin.Utils.CheckFidstinConnection '+b);
-    }
-}
-
-
-
-
-
 //May 27th Allows dev debug the scanstring
 Fidestin.Utils.getUnSafeString=function(safeString){
     console.log('Fidestin.Utils.getUnsafeString:' + safeString);
@@ -226,76 +188,7 @@ Fidestin.Utils.getUnSafeString=function(safeString){
     
 }
 
-Fidestin.Utils.CheckHeartBeat=function(){
-			console.log('Fidestin.Utils.CheckHeartBeat');
-    try{	
-				var params="{}";
-	            $.ajax({
-	                type:"POST",
-                       async:false,
-	                data:params,
-	                dataType:"json",    
-	                contentType: "application/json; charset=utf-8",
-	                url:Fidestin.WebServices.Location+ "/Service1.asmx/IsAlive",
-	                success:function(result) {
-                       return true;
-                       console.log('Is alive');
-	                },
-	                error:function(){
-                       console.log('Problem with HeartBeat');
-                       return false;
-	                }
 
-	            });
-    }
-    
-    catch(b)
-    {
-        console.log('Error in CheckHeartBeat '+b);
-        return false;
-    }
-}
-
-
-Fidestin.Utils.getSupplierVouchers=function(supplierID, redeemedStatus){
-   // console.log('Fidestin.Utils.getOpenVouchers');
-   
-    
-    var params="{supplierID:'"+supplierID+"',redeemedStatus:'"+redeemedStatus+"'}";
-	//alert(params);
-    $.ajax({
-           type:"POST",
-           data:params,
-           dataType:"json",    
-           contentType: "application/json; charset=utf-8",
-           url:"http://www.handygrub.com/test/Service1.asmx/ListSupplierVouchers",
-           success:function(result) {
-        
-           vouchers=result.length;
-           
-           $('#tabvouchers').html('Vouchers ('+vouchers+')');
-           var htmltable='<thead>';
-           var trclass='';
-           htmltable+='<tr><th>Customer</th><th>Purchase Date</th><th>Store</th><th>Description</th><th>Town</th><th>Redeem</th></tr>';
-           htmltable+='</thead>';
-           htmltable+='<tbody>';
-           //LOOP STARTS
-           for (var i=0;i<result.length;i++){
-           trclass=(i%2==0)?'alt':'bla';
-           htmltable+='<TR class='+trclass+'><TD><a href="#" target="_blank">'+result[i].customeremail+'</a></TD><TD>'+ result[i].datecreated+'</TD><td>'+result[i].storename+'</td><td>'+result[i].description+'</td><td>'+result[i].town+'</td><td><a href="#" onclick="javascript:Fidestin.Utils.javFunc('+result[i].id+');">'+result[i].id+'-'+result[i].customerID+'-'+result[i].storeID+'</td></TR>';
-           }
-           //LOOP ENDS
-           htmltable+='</tbody>';
-           $('#vouchers_table').append(htmltable);
-           
-           },
-           error:function(){
-           debugalert('Error in getOpenVouchers'+b.message);
-           }
-           
-           });      
-    
-}
 
 
 Fidestin.Utils.getOpenVouchers=function(storeID){
@@ -473,80 +366,7 @@ Fidestin.Utils.GetQueryStrings=function() {
 } 
 
 
-Fidestin.Utils.AddClickEvent=function(eventType,thisVoucher,callback)
-{
-	try{
-		var nowd=new Date();
-        var randDate=dateFormat(nowd,"yyyy-mm-dd-HH:MM:ss LL");
-		
-		  var params="{clicktype:'" + eventType + "',voucherID:'"+thisVoucher+"',randDate:'"+randDate+"'}";
-		  console.log('AddClickEvent-' + params);
-		        $.ajax({
-	                type:"POST",
-	                data:params,
-	                dataType:"json",    
-	                contentType: "application/json; charset=utf-8",
-	                url:"http://www.fidestin.com/interbooking/booking.asmx/AddClickThru",
-	                success:function(result) {
-						console.log('Success');
-						if (callback) {
-							callback();
-						}
-					},
-					 error:function(){
-	                    $(document).ajaxError(function(e, xhr, settings, exception) { 
-	                    	console.log('error in: ' + settings.url + ' \n'+'error:\n' + xhr.responseText + "\n" + exception.message); 
-	                    	});
-						return -99;
-	                }
-	            })      
-			}
-			
-			catch (b){
-				alert('Error ' + b);
-			}
-}
 
-
-
-Fidestin.Utils.getWeekVouchers=function(storeID,yearcreated,callback)
-{
-	try{
-		var nowd=new Date();
-        var randdate=dateFormat(nowd,"yyyy-mm-dd-HH:MM:ss LL");
-		
-		  var params="{storeID:'" + storeID + "',yearcreated:'"+yearcreated+"',randdate:'"+randdate+"'}";
-		  console.log('getWeekVouchers-' + params);
-		        $.ajax({
-	                type:"POST",
-	                data:params,
-	                dataType:"json",    
-	                contentType: "application/json; charset=utf-8",
-	                url:"http://www.fidestin.com/interbooking/booking.asmx/VoucherTotals",
-	                success:function(result) {
-						for (var i=0;i<result.length;i++){
-							vLine.data[i]=result[i].weekTotal;
-							//console.log(vLine.data[i]);
-						}
-						console.log('Success'+vLine.data.length);
-						if (typeof callback !='undefined') {
-							console.log('Calling callback');
-							callback();
-						}
-					},
-					 error:function(){
-	                    $(document).ajaxError(function(e, xhr, settings, exception) { 
-	                    	console.log('error in: ' + settings.url + ' \n'+'error:\n' + xhr.responseText + "\n" + exception.message); 
-	                    	});
-						return -99;
-	                }
-	            })      
-			}
-			
-			catch (b){
-				alert('Error ' + b);
-			}
-}
 
 $(document).ready(function(){
                   //callFB();
